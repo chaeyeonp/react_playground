@@ -6,7 +6,7 @@ import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/ico
 
 const { SubMenu } = Menu;
 
-class Gnb extends React.Component {
+class Naviagator extends React.Component {
     state = {
         theme: 'light',
         current: '1',
@@ -43,13 +43,13 @@ class Gnb extends React.Component {
                     mode="horizontal"
 
                 >
-                    <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-                        <Menu.Item key="1">Option 1</Menu.Item>
-                        <Menu.Item key="2">Option 2</Menu.Item>
+                    <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One" >
+                        <Menu.Item key="1" className="tab_day on">Option 1</Menu.Item>
+                        <Menu.Item key="2" a href = "#none" className="tab_day">Option 2</Menu.Item>
                         <Menu.Item key="3">Option 3</Menu.Item>
                         <Menu.Item key="4">Option 4</Menu.Item>
                     </SubMenu>
-                    <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
+                    <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two" a href = "#none">
                         <Menu.Item key="5">Option 5</Menu.Item>
                         <Menu.Item key="6">Option 6</Menu.Item>
                         <SubMenu key="sub3" title="Submenu">
@@ -57,7 +57,7 @@ class Gnb extends React.Component {
                             <Menu.Item key="8">Option 8</Menu.Item>
                         </SubMenu>
                     </SubMenu>
-                    <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three">
+                    <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three" a href = "#none">
                         <Menu.Item key="9">Option 9</Menu.Item>
                         <Menu.Item key="10">Option 10</Menu.Item>
                         <Menu.Item key="11">Option 11</Menu.Item>
@@ -69,4 +69,4 @@ class Gnb extends React.Component {
     }
 }
 
-export default Gnb;
+export default Naviagator;
